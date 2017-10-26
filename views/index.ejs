@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/socket.io/socket.io.js"></script>  
+<script>  
+  var socket = io();
+</script>  
+
+  </head>
+  <body>
+  	<div id="login-form">
+	    <h1><%= title %></h1>
+	    <p>Welcome to <%= title %></p>
+	    <input type="text" id="name" placeholder="Enter your username">
+    	<button id="login">Login</button>
+    </div>
+    <div id="chat-container">
+    	<h3>Chats</h3>
+    	<ul id="message-list"></ul>
+    	<br>
+    	<form action="">
+	    	<input id="new-message" autocomplete="off">
+	    	<button id="send-message">Send</button>
+	    </form>
+    </div>
+  </body>
+  <script src="javascripts/jquery.js"></script>
+  <script src="javascripts/client.js"></script>
+</html>
